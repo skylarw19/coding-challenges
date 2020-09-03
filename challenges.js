@@ -107,4 +107,20 @@ var recursivePow = function(n,e){
     else return n * recursivePow(n,e-1)
 }
 
-console.log(recursivePow(2,3))
+// console.log(recursivePow(2,3))
+
+var reverse1 = function(x) {
+    let str = x.toString().split('');
+    let revNum;
+    if (x > 0 || x===0 ) {
+        revNum = parseInt(str.reverse().join(''));  
+    }
+    else if (x<0) {
+        str.shift()
+        revNum = parseInt(str.reverse().join(''))*-1; 
+    }  
+    if (revNum < -1*Math.pow(2,31) || revNum > Math.pow(2,31)-1) return 0;
+    else return revNum;
+};
+
+console.log(reverse1(-123))
