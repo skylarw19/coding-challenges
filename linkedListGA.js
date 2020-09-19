@@ -128,11 +128,68 @@ class LinkedList{
       } 
       return walker.data === data ? index : false;
     }
-  
+    
+      // sort(){  // sort the Linked List in ascending order of data values
+    //   if(!this.head) return this;
+    //   let swapped = false;
+    //   let walker = this.head;
+    //   while (walker && walker.next){
+    //     if (walker.data > walker.next.data){
+    //       swapped = true;
+    //       if (walker === this.head){
+    //         let first = this.head;
+    //         let second = this.head.next;
+    //         first.next = second.next;
+    //         second.next = first;
+    //         this.head = second;
+    //       } else {
+    //         let first = walker;
+    //         let second = walker.next;
+    //         first.next = second.next;
+    //         second.next = first;
+    //       }
+    //     }
+    //     walker = walker.next;
+    //   }
+    //   if(!swapped) return this;
+    //   else swapped = false;
+    // }
     sort(){
-        // sort the Linked List in ascending order of data values
-      if(!this.head) return this;
-      
+        if(!this.head){
+            return this;
+        }
+        let swapped = false;
+        let walker;
+        let preWalker;
+        while(true){
+            walker = this.head;
+            while(walker && walker.next){
+                if(walker.next.data < walker.data){
+                    swapped = true;
+                    if(walker == this.head){
+                        let first = this.head;
+                        let second = this.head.next;
+                        first.next = second.next;
+                        second.next = first;
+                        this.head = second;
+                    }else{
+                        let first = walker;
+                        let second = walker.next;
+                        let third = walker.next.next;
+                        first.next = third;
+                        second.next = first;
+                        preWalker.next = second;
+                    }
+                }
+                preWalker = walker;
+                walker = walker.next;
+            }
+            if(!swapped){
+                return this;
+            }else{
+                swapped = false;
+            }
+        }
     }
 }
 
