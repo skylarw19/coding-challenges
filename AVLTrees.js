@@ -16,11 +16,11 @@ class AVLTree {
 
     //PSUEDO CODE
     rotateRight(node){
-        let newRoot = this.left;    //set newRoot to node 15
-        this.root.left = newRoot.right; // this.root is still 20. set left to 18
-        newRoot.right = this.root; //set right of newRoot to branch of 20. the left side is already set.
+        let newRoot = node.left;    //set newRoot to node 15
+        node.root.left = newRoot.right; // node.root is still 20. set left to 18
+        newRoot.right = node.root; //set right of newRoot to branch of 20. the left side is already set.
         // set new heights after rotation
-        this.root.height = max(root.left, root.right)+1;   //take max heigh of left or right sides and add 1
+        node.root.height = max(root.left, root.right)+1;   //take max heigh of left or right sides and add 1
         newRoot.height= max(newRoot.left, newRoot.right)+1;
         return newRoot;
     }
