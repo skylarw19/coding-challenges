@@ -10,3 +10,5 @@ A running repo of different coding challenges done to keep my mind sharp!
 - leetcode 206 - reverse singly linked list - 9/18/2020
 - GA codepen exercise for bubble sort and insertion sort 9/21/2020
 - GA codepen exercise for sets, hash tables, binary tree
+- leetcode 66 - Plus One
+- leetcode349 - Intersection of 2 arrays
