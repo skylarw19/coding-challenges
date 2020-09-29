@@ -18,3 +18,14 @@ var isAnagram = function(s, t) {
     
     return true;
 };
+
+//leetcode 88 merge sorted array
+var merge = function(nums1, m, nums2, n) {
+    nums1.splice(n,n);
+    let newNums = [...nums1, ...nums2];
+    return newNums.sort((a,b) => a-b)
+
+};
+
+nums1 = [1,2,3,0,0,0]
+nums2 = [2,5,6]
