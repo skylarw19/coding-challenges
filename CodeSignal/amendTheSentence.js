@@ -6,8 +6,15 @@ function amendTheSentence(s) {
             s.splice(i, 0, " ")
         }
     }
-    s.shift();
+    if (!s[0].match(/[a-z]/)){
+        s.shift();
+    }
     return s.join('')
+}
+
+//with replace and regex
+function amendTheSentence(s) {
+    return s.replace(/([A-Z])/g, " $1").toLowerCase().trim()
 }
 
 let s = "CodesignalIsAwesome";
