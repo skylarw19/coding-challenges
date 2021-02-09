@@ -1,4 +1,4 @@
-//days of the wk
+//FUNCTION DAYS OF WK
 //function receives a string S, and you wanna find the day it is K days later
 function daysOfWk (S,K) {
     let startDay;
@@ -27,6 +27,9 @@ function daysOfWk (S,K) {
 
 // console.log(daysOfWk("Mon", 13))
 
+
+// FUNCTION INSERT 5
+// receives an int N (-8000...8000), must return the maximum value with a digit "5" inserted
 function insert5 (N){
     stringN = N.toString(); //convert num to str
     if (N < 0){ //if negative number
@@ -64,12 +67,16 @@ function insert5 (N){
     }
 }
 
-// console.log(insert5(268))
-// console.log(insert5(670))
-// console.log(insert5(0))
-// console.log(insert5(-999))
+// console.log(insert5(268)) // -->5268
+// console.log(insert5(670)) // -->6750
+// console.log(insert5(0))   // -->50
+// console.log(insert5(-999)) // -->-5999
 
 
+//FUNCTION BALANCED
+//receives a str S. must return the min length of balanced, else return -1
+//considered balanced if all upper and lower case letters appear (but actual count doesn't matter)
+//CATatc --> balanced 6, //CCCCCAca --> balanced 8
 //didn't finish
 function balanced(S){
     let upperSet = {}
