@@ -1,31 +1,39 @@
 //FUNCTION DAYS OF WK
 //function receives a string S, and you wanna find the day it is K days later
 function daysOfWk (S,K) {
-    let startDay;
-    switch (S) {
-        case "Mon": startDay = 1; break;
-        case "Tue": startDay = 2; break;
-        case "Wed": startDay = 3; break;
-        case "Thu": startDay = 4; break;
-        case "Fri": startDay = 5; break;
-        case "Sat": startDay = 6; break;
-        case "Sun": startDay = 7; break;
-    }
+    // let startDay;
+    // switch (S) {
+    //     case "Mon": startDay = 1; break;
+    //     case "Tue": startDay = 2; break;
+    //     case "Wed": startDay = 3; break;
+    //     case "Thu": startDay = 4; break;
+    //     case "Fri": startDay = 5; break;
+    //     case "Sat": startDay = 6; break;
+    //     case "Sun": startDay = 7; break;
+    // }
     
-    let endDay = (startDay+K)%7;
-    switch (endDay) {
-        case 1: return "Mon";
-        case 2: return "Tue";
-        case 3: return "Wed"
-        case 4: return "Thu"
-        case 5: return "Fri"
-        case 6: return "Sat"
-        case 0: return "Sun"
-    }
+    // let endDay = (startDay+K)%7;
+    // switch (endDay) {
+    //     case 1: return "Mon";
+    //     case 2: return "Tue";
+    //     case 3: return "Wed"
+    //     case 4: return "Thu"
+    //     case 5: return "Fri"
+    //     case 6: return "Sat"
+    //     case 0: return "Sun"
+    // }
+
+    // alternative solution
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    let idx = days.indexOf(S);
+    let endDay = (idx+K)%7
+    return days[endDay]
     
 }
 
-// console.log(daysOfWk("Mon", 13))
+console.log(daysOfWk("Wed", 2))
+console.log(daysOfWk("Mon", 10))
+console.log(daysOfWk("Mon", 14))
 
 
 // FUNCTION INSERT 5
