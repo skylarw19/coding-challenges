@@ -4,10 +4,8 @@
 
 function numKeypadSolutions(wordlist, keypads){
     let result = []
-    for (let a = 0; a<keypads.length; a++){  //set result array to 0
-        result.push(0)
-    }
     for (let i=0; i<keypads.length; i++){  //go thru keypad list
+        result.push(0); //initialize result arr with value 0
         let keypad = keypads[i] // keypad string
         let key = keypad[0]; // first letter of keypad string
         for (let j=0; j<wordlist.length; j++){
