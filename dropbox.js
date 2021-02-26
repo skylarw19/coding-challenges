@@ -72,3 +72,29 @@ console.log(numKeypadSolutions(wordlist, keypads))
 //     }
 //     return result;
 // }
+
+// function countdown(n1,n2){
+//     let total = n1+n2;
+//     let printTimer = setInterval(seconds, 1000);
+//     function seconds(){
+//         if(total <= 0){
+//             clearInterval(printTimer)
+//         }
+//         console.log(`${total} seconds remaining`)
+//         total--;
+//     }
+// }
+
+
+// function countdown(n1,n2){
+//     let total = n1+n2;
+//     let printTimer = setInterval(() => {
+//         if(total <=0){
+//             clearInterval(printTimer)
+//         }
+//         console.log(`${total} seconds remaining`)
+//         total--;
+//     }, 1000);    
+// }
+
+// countdown(1,3)
